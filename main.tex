@@ -1,0 +1,111 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Presentación Beamer - Plantilla LaTeX
+% Versión 2.0 (8 de marzo de 2022)
+% Plantilla original: https://www.LaTeXTemplates.com
+% Autor: Vel (vel@latextemplates.com)
+% Licencia: CC BY-NC-SA 4.0
+
+% Este modelo de presentación fue 
+% creado a partir del modelo de Giovanni Spadaro.
+% Disponible en: https://github.com/Giovo17/presentation-template-unict-lm-data
+%
+% Adaptado por Lautaro Lombardi para crear una versión especial 
+% para los estudiantes de Facultad de Matemática, Astronomía, Física y Computación (FAMAF - UNC).
+% Disponible en: https://github.com/lautalom/beamer_FAMAF
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+% CLASE DEL DOCUMENTO Y CONFIGURACIONES BÁSICAS
+%----------------------------------------------------------------------------------------
+\documentclass[
+    11pt,               % Tamaño estándar de la fuente
+    % t,                % Alinear verticalmente en la parte superior
+    %aspectratio=169,   % Definir proporción 16:9
+]{beamer}
+\graphicspath{{img/}}         % Define el directorio de las imágenes
+
+%---------------------------------------------------------------------------------------
+% PAQUETES NECESARIOS
+%----------------------------------------------------------------------------------------
+\usepackage{
+    booktabs,     % Mejora la apariencia de las líneas en tablas
+    palatino,     % Define Palatino como fuente principal
+    subcaption    % Soporte para subfiguras
+}
+\usepackage[default]{opensans}  % Define Open Sans como fuente secundaria
+\input{config/code_langs}       % Importa configuraciones para resaltar código
+
+%---------------------------------------------------------------------------------------
+% CONFIGURACIÓN DEL TEMA
+%----------------------------------------------------------------------------------------
+% Tema Base
+\usetheme{Boadilla}                          % Define el tema principal
+\useinnertheme{circles}                      % Tema interno con círculos
+\useoutertheme{miniframes}                   % Tema externo con miniframes
+\setbeamertemplate{navigation symbols}{}     % Elimina símbolos de navegación
+
+% Colores Personalizados
+\definecolor{primaryColor}{RGB}{11, 139, 171} % Color primario - cian Famaf oficial
+\definecolor{secondaryColor}{RGB}{0, 104, 128}    % Color secundario - azul verdoso
+
+% Configuraciones de Colores
+\setbeamercolor{structure}{fg=primaryColor}
+\setbeamercolor{palette primary}{bg=primaryColor, fg=white}
+\setbeamercolor{palette secondary}{bg=secondaryColor, fg=white}
+\setbeamercolor{title}{bg=primaryColor, fg=white}
+
+% Colores del Encabezado y Pie de Página
+\setbeamercolor{headline}{bg=secondaryColor, fg=white}
+\setbeamercolor{section in head/foot}{bg=primaryColor, fg=white}
+\setbeamercolor{subsection in head/foot}{bg=secondaryColor, fg=white}
+\setbeamercolor{author in head/foot}{bg=primaryColor, fg=white}
+\setbeamercolor{title in head/foot}{bg=secondaryColor, fg=white}
+\setbeamercolor{date in head/foot}{bg=primaryColor, fg=white}
+\setbeamercolor{page number in head/foot}{bg=primaryColor, fg=white}
+
+%----------------------------------------------------------------------------------------
+% BIBLIOGRAFÍA
+%----------------------------------------------------------------------------------------
+\bibliographystyle{plain}
+%----------------------------------------------------------------------------------------
+% INFORMACIÓN DE LA PRESENTACIÓN
+%----------------------------------------------------------------------------------------
+\title[Título]{Título completo}          % [Versión corta]{Versión completa}
+\author[Nombre abreviado]{Nombre}        % [Versión corta]{Nombre completo}
+\institute[FAMAF]{Facultad de Matemática, Astronomía, Física y Computación \\ (FAMAF - UNC) }
+\date[Año]{MES / AÑO}
+
+%----------------------------------------------------------------------------------------
+% INICIO DEL DOCUMENTO
+%----------------------------------------------------------------------------------------
+\begin{document}
+
+% Diapositiva de título con logo
+\begin{frame}
+    \begin{figure}
+        \includegraphics[width=0.70\linewidth]{img/famaf.png}
+    \end{figure}
+    \titlepage
+\end{frame}
+
+% Sumario
+\begin{frame}
+    \frametitle{Estructura de la presentación}
+    \tableofcontents
+\end{frame}
+
+% Inclusión de las secciones
+\include{sections/section00}
+\include{sections/section01}
+\include{sections/section02}
+\include{sections/section03}
+
+% Diapositiva final
+\begin{frame}
+    \begin{center}
+        {\Huge ¡Fin de la presentación!}
+    \end{center}
+\end{frame}
+
+\end{document}
+
