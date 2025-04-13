@@ -82,7 +82,7 @@
 
 \begin{frame}
     \frametitle{Modelo de tasas de interés}
-    \begin{definition}[cuenta de moneda]
+    \begin{defin}[cuenta de moneda]
         Activo que capitaliza intereses a una tasa de interés r libre de riesgo.\\
         \begin{equation*}
             B(0) = 1 
@@ -96,15 +96,15 @@
         \begin{equation*}
             B(t) = B(0)e^{\int_0^t r(s)ds}
         \end{equation*}
-    \end{definition}
+    \end{defin}
 \end{frame}
 
 %----------------------------------------------------------------------------------------
 
 \begin{frame}
     \frametitle{Valor inicial de un flujo de caja}
-    \begin{definition}[Valor inicial]
-        Si quiero obtener \$1 en el tiempo T, el valor presente es:
+    \begin{defin}[Valor inicial]
+        El valor inicial de \$1 en el tiempo T es A tal que:
         \begin{equation*}
             A \times B(T) = 1
         \end{equation*}
@@ -114,13 +114,13 @@
         \begin{equation*}
             A = e^{-\int_0^T r(s)ds}
         \end{equation*}
-    \end{definition}
+    \end{defin}
 \end{frame}
 %----------------------------------------------------------------------------------------
 
 \begin{frame}
     \frametitle{Valor presente}
-    \begin{definition}[Factor de descuento]
+    \begin{defin}[Factor de descuento]
         En $t<T$ el valor presente de un flujo de caja $1$ en T es:
         \begin{equation*}
             A \times B(t) = \frac{B(t)}{B(T)}
@@ -128,17 +128,17 @@
         \begin{equation*}
            D_B(t,T) = \frac{B(t)}{B(T)}
         \end{equation*}
-    \end{definition}
+    \end{defin}
 \end{frame}
 
 \begin{frame}
     \frametitle{Bono cupón cero}
-    \begin{definition}[Bono cupón cero]
+    \begin{defin}[Bono cupón cero]
         Un bono cupón cero es un activo que paga \$1 en el tiempo T.\\
         \begin{equation*}
             P(T, T) = 1  
         \end{equation*}
-    \end{definition}
+    \end{defin}
 \end{frame}
 
 %----------------------------------------------------------------------------------------
