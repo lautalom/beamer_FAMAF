@@ -1,10 +1,16 @@
-\section{Tasas de interés e instrumentos derivados}
+\section{Tasas de interés y derivados}
 
+\begin{frame}
+% center the title
+    \begin{center}
+        \textbf{\huge Tasas de interés y derivados}
+    \end{center}
+\end{frame}
 %----------------------------------------------------------------------------------------
 
 \begin{frame}
     \frametitle{Tasa de interés simple}
-    Sean A y B dos contrapartes, tal que A le presta un monto \$1 en tiempo $T_1$ a B y B le paga un monto \$1 en tiempo $T_2$ más cierto interés K entre $T_1$ y $T_2$. 
+    Si A le presta un monto \$1 en tiempo $T_1$ a B y B le paga un monto \$1 en tiempo $T_2$ más cierto interés K entre $T_1$ y $T_2$. 
     \begin{figure}[h]
        \centering
        \includegraphics[width=\textwidth]{img/cap1/accrual_simple.png}
@@ -18,7 +24,7 @@
 \begin{frame}
     \frametitle{Sistemas de Capitalización}
     \begin{itemize}
-        \item \textbf{Capitalización Simple:} El interés se calcula sobre el capital inicial. Un interés de \$100 a una tasa de 10\% anual durante 3 años resulta en $100 \times (1+0.1 \times 3) = 130$.
+        \item \textbf{Capitalización Simple:} El interés se calcula sobre el capital inicial. Un interés de \$100 a una tasa de 10\% anual con capitalización semestral durante 3 años resulta en $100 \times (1+\frac{0.1}{2} \times 6) = 130$.
         \item \textbf{Capitalización Compuesta Discreta:} El interés se calcula sobre el capital inicial más los intereses acumulados. Invertir \$100 a una tasa de 10\% anual durante 3 años con capitalización semestral resulta en $100 \times (1+0.1/2)^{2 \times 3} = 133.1$.  
         \item \textbf{Capitalización Compuesta Continua:} El interés se calcula sobre el capital inicial más los intereses acumulados, pero en un límite continuo. Invertir \$100 a una tasa de 10\% anual durante 3 años con capitalización continua resulta en $100 \times e^{0.1 \times 3} = 134.98$. 
     \end{itemize}
@@ -32,7 +38,7 @@
     Componentes:
     \begin{itemize}
         \item \textbf{Valor nominal (N):} Monto a pagar al vencimiento.
-        \item \textbf{Tasa de interés (r):} Tasa \textit{cero}.
+        \item \textbf{Tasa de interés (r):} Tasa \textit{cero} anual.
         \item \textbf{Tiempo hasta el vencimiento (T):} Tiempo en años hasta el vencimiento.
         \item \textbf{Precio (P):} Precio actual del bono.
     \end{itemize}
@@ -72,4 +78,67 @@
        \label{bono_cupon}
    \end{figure}
 \end{frame}
+%----------------------------------------------------------------------------------------
+
+\begin{frame}
+    \frametitle{Modelo de tasas de interés}
+    \begin{definition}[cuenta de moneda]
+        Activo que capitaliza intereses a una tasa de interés r libre de riesgo.\\
+        \begin{equation*}
+            B(0) = 1 
+        \end{equation*}
+        \begin{equation*}
+            dB(t) = rB(t)dt
+        \end{equation*}
+        \begin{equation*}
+            B(t) = B(0)e^{rt}
+        \end{equation*}
+        \begin{equation*}
+            B(t) = B(0)e^{\int_0^t r(s)ds}
+        \end{equation*}
+    \end{definition}
+\end{frame}
+
+%----------------------------------------------------------------------------------------
+
+\begin{frame}
+    \frametitle{Valor inicial de un flujo de caja}
+    \begin{definition}[Valor inicial]
+        Si quiero obtener \$1 en el tiempo T, el valor presente es:
+        \begin{equation*}
+            A \times B(T) = 1
+        \end{equation*}
+        \begin{equation*}
+            A = \frac{1}{B(T)} = e^{-rT}
+        \end{equation*}
+        \begin{equation*}
+            A = e^{-\int_0^T r(s)ds}
+        \end{equation*}
+    \end{definition}
+\end{frame}
+%----------------------------------------------------------------------------------------
+
+\begin{frame}
+    \frametitle{Valor presente}
+    \begin{definition}[Factor de descuento]
+        En $t<T$ el valor presente de un flujo de caja $1$ en T es:
+        \begin{equation*}
+            A \times B(t) = \frac{B(t)}{B(T)}
+        \end{equation*}
+        \begin{equation*}
+           D_B(t,T) = \frac{B(t)}{B(T)}
+        \end{equation*}
+    \end{definition}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Bono cupón cero}
+    \begin{definition}[Bono cupón cero]
+        Un bono cupón cero es un activo que paga \$1 en el tiempo T.\\
+        \begin{equation*}
+            P(T, T) = 1  
+        \end{equation*}
+    \end{definition}
+\end{frame}
+
 %----------------------------------------------------------------------------------------
