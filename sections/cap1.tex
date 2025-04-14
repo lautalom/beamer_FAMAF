@@ -71,16 +71,6 @@
 %----------------------------------------------------------------------------------------
 
 \begin{frame}
-    \begin{figure}[h]
-       \centering
-       \includegraphics[width=\textwidth]{img/cap1/bono_cupon.jpg}
-       \caption{Valoración de un bono con cupones}
-       \label{bono_cupon}
-   \end{figure}
-\end{frame}
-%----------------------------------------------------------------------------------------
-
-\begin{frame}
     \frametitle{Modelo de tasas de interés}
     \begin{defin}[cuenta de moneda]
         Activo que capitaliza intereses a una tasa de interés r libre de riesgo.\\
@@ -131,6 +121,8 @@
     \end{defin}
 \end{frame}
 
+%----------------------------------------------------------------------------------------
+
 \begin{frame}
     \frametitle{Bono cupón cero}
     \begin{defin}[Bono cupón cero]
@@ -141,4 +133,89 @@
     \end{defin}
 \end{frame}
 
+%----------------------------------------------------------------------------------------
+
+\begin{frame}
+    \frametitle{Tasas spot}
+    \begin{defin}[Tasa spot simple]
+        Es la tasa de interés L vigente entre [S,T] tal que:
+        \begin{equation*}
+            P(S,T) \times (1+L(S,T) (T-S)) = 1
+        \end{equation*}
+    \end{defin}
+    \begin{defin}[Tasa spot compuesta]
+        Es la tasa de interés R vigente entre [S,T] tal que:
+        \begin{equation*}
+            P(S,T) \times (1+R(S,T))^{(T-S)} = 1
+        \end{equation*}
+    \end{defin}
+\end{frame}
+%----------------------------------------------------------------------------------------
+
+\begin{frame}
+    \frametitle{Estructura a término en t}
+    \begin{figure}[h]
+       \centering
+       \includegraphics[width=0.8\textwidth]{img/cap1/term_structure.png}
+       \caption{Estructura a término en t}
+       \label{term_structure}
+    \end{figure}
+\end{frame}
+
+%----------------------------------------------------------------------------------------
+
+\begin{frame}
+    \frametitle{Tasas forward}
+    Son tasas implícitas por las tasas cero.
+    \begin{itemize}
+        \item Sean las tasas cero a 1 y 2 años conocidas e iguales a 3 y 4\% respectivamente.
+        \item entonces la tasa forward f entre el año 1 y 2 es tal que
+        \[e^{0.03} \cdot e^{f(1,2)} = e^{0.04 \cdot 2} \therefore f(1,2)=0.05 \]
+        \item Momentos de interés:
+        \begin{itemize}
+            \item t: momento de cálculo
+            \item T: momento de inicio de capitalización
+            \item T+$\tau$: momento de finalización de capitalización
+        \end{itemize}
+    \end{itemize}
+\end{frame}
+
+%----------------------------------------------------------------------------------------
+
+\begin{frame}
+    \frametitle{Bonos y tasas forward}
+    Para capturar un bono que se emitirá en el futuro deberíamos
+    \begin{itemize}
+        \item Comprar un (1) BCC con madurez T+$\tau$ y vender alguna cantidad BCC con madurez T.
+        \item El costo de la estrategia es:
+        \begin{equation*}
+            -1 \cdot P(t,T+\tau) + \frac{P(t,T + \tau)}{P(t,T)} \cdot P(t,T) = 0
+        \end{equation*}
+        \item Nos queda un flujo saliente en T, y un flujo entrante en T+$\tau$.
+    \end{itemize}
+    \begin{defin}[Bono forward]
+        Un bono forward es un activo que paga \$1 en el tiempo T+$\tau$ y cuyo precio es
+        \begin{equation*}
+            P(t,T, T+\tau) = \frac{P(t,T+\tau)}{P(t,T)}
+        \end{equation*}
+    \end{defin}
+\end{frame}
+
+%----------------------------------------------------------------------------------------
+
+\begin{frame}
+    \frametitle{Tasas forward}
+    \begin{defin}[Tasa forward simple]
+        Es la tasa de interés L vigente entre [T,T+$\tau$] tal que:
+        \begin{equation*}
+            L(t, T, T+\tau) = \frac{1}{\tau} \left( \frac{1}{P(t, T, T+\tau)} - 1\right)
+        \end{equation*}
+    \end{defin}
+    \begin{defin}[Tasa forward continua]
+        Es la tasa de interés R vigente entre [T,T+$\tau$] tal que:
+        \begin{equation*}
+            R(t, T, T+\tau) = \frac{1}{\tau} \cdot \ln\left(\frac{1}{P(t, T, T+\tau)}\right)
+        \end{equation*}
+    \end{defin}
+\end{frame}
 %----------------------------------------------------------------------------------------
