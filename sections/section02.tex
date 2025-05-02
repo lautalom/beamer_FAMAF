@@ -1,0 +1,88 @@
+\section{Ejemplos con código} 
+
+%----------------------------------------------------------------------------------------
+\begin{frame}[fragile]
+    \frametitle{Python}
+    
+    \begin{python}
+def calcular_doble(x):
+    """Retorna el doble del número"""
+    return 2 * x
+
+# test de función
+numero = 5
+resultado = calcular_doble(numero)
+print(f"El doble de {numero} es {resultado}")
+    \end{python}
+\end{frame}
+
+%----------------------------------------------------------------------------------------
+\begin{frame}[fragile]
+    \frametitle{C}
+    
+    \begin{clang}
+#include <stdio.h>
+
+int main() {
+    int numero = 5;
+    int doble = 2 * numero;
+    
+    printf("el doble de %d es %d\n", numero, doble);
+    return 0;
+}
+    \end{clang}
+\end{frame}
+
+%----------------------------------------------------------------------------------------
+\begin{frame}[fragile]
+    \frametitle{C++}
+    
+    \begin{cpp}
+#include <iostream>
+using namespace std;
+
+int main() {
+    int numero = 5;
+    int doble = 2 * numero;
+    
+    cout << "el doble de " << numero;
+    cout << " es " << doble << endl;
+    return 0;
+}
+    \end{cpp}
+\end{frame}
+
+%----------------------------------------------------------------------------------------
+\begin{frame}[fragile]
+    \frametitle{R}
+    
+    \begin{rlang}
+# Funcion para calcular el doble
+calcular_doble <- function(x) {
+  return(2 * x)
+}
+
+# Testeando la funcion
+numero <- 5
+resultado <- calcular_doble(numero)
+print(paste("el doble de", numero, "es", resultado))
+    \end{rlang}
+\end{frame}
+
+%----------------------------------------------------------------------------------------
+
+\begin{frame}[fragile]
+    \frametitle{Java}
+    
+    \begin{java}
+public class Ejemplo {
+    public static void main(String[] args) {
+        int numero = 5;
+        int doble = 2 * numero;
+        
+        System.out.println("el doble de " + numero +
+                         " es " + doble);
+    }
+}
+    \end{java}
+\end{frame}

@@ -1,0 +1,46 @@
+\section{Ejemplos con ecuaciones e imágenes}
+
+%----------------------------------------------------------------------------------------
+
+\begin{frame}{Una imagen}
+   \begin{figure}[h]
+       \centering
+       \includegraphics[width=0.7\textwidth]{img/famaf.png}
+       \caption{Leyenda}
+       \label{fig:label_da_imagem}
+   \end{figure}
+\end{frame}
+
+%----------------------------------------------------------------------------------------
+
+\begin{frame}{Dos imágenes}
+   \begin{figure}
+       \centering
+       \begin{subfigure}[b]{0.45\textwidth}
+           \centering
+           \includegraphics[width=\textwidth]{img/famaf.jpg}
+           \caption{Leyenda 1}
+           \label{fig:img1}
+       \end{subfigure}
+       \hfill
+       \begin{subfigure}[b]{0.45\textwidth}
+           \centering
+           \includegraphics[width=\textwidth]{img/famaf.jpg}
+           \caption{Leyenda 2}
+           \label{fig:img2}
+       \end{subfigure}
+   \end{figure}
+\end{frame}
+
+%----------------------------------------------------------------------------------------
+\begin{frame}{Ecuaciones}
+    Ecuaciones de Navier-Stokes Forma expandida (3D):
+    \footnotesize
+        \begin{align*}
+            \rho\left(\frac{\partial u}{\partial t} + u\frac{\partial u}{\partial x} + v\frac{\partial u}{\partial y} + w\frac{\partial u}{\partial z}\right) &= -\frac{\partial p}{\partial x} + \mu\left(\frac{\partial^2 u}{\partial x^2} + \frac{\partial^2 u}{\partial y^2} + \frac{\partial^2 u}{\partial z^2}\right) + f_x \\[0.3cm]
+            \rho\left(\frac{\partial v}{\partial t} + u\frac{\partial v}{\partial x} + v\frac{\partial v}{\partial y} + w\frac{\partial v}{\partial z}\right) &= -\frac{\partial p}{\partial y} + \mu\left(\frac{\partial^2 v}{\partial x^2} + \frac{\partial^2 v}{\partial y^2} + \frac{\partial^2 v}{\partial z^2}\right) + f_y \\[0.3cm]
+            \rho\left(\frac{\partial w}{\partial t} + u\frac{\partial w}{\partial x} + v\frac{\partial w}{\partial y} + w\frac{\partial w}{\partial z}\right) &= -\frac{\partial p}{\partial z} + \mu\left(\frac{\partial^2 w}{\partial x^2} + \frac{\partial^2 w}{\partial y^2} + \frac{\partial^2 w}{\partial z^2}\right) + f_z
+        \end{align*}
+        
+    donde $\mathbf{v} = (u,v,w)$ es el campo de velocidad, $p$ es la presión, $\rho$ es la densidad, $\mu$ es la viscosidad dinámica y $\mathbf{f}$ representa fuerzas externas.
+\end{frame}
